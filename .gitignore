@@ -1,3 +1,7 @@
+# =========================================================
+# Python
+# =========================================================
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -6,7 +10,10 @@ __pycache__/
 # C extensions
 *.so
 
-# Distribution / packaging
+# =========================================================
+# Distribution / Packaging
+# =========================================================
+
 .Python
 build/
 develop-eggs/
@@ -26,17 +33,24 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# =========================================================
 # PyInstaller
-#   Usually these files are written by a python script from a template
-#   before PyInstaller builds the exe, so as to inject date/other infos into it.
+# =========================================================
+
 *.manifest
 *.spec
 
+# =========================================================
 # Installer logs
+# =========================================================
+
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
+# =========================================================
+# Unit tests / Coverage
+# =========================================================
+
 htmlcov/
 .tox/
 .nox/
@@ -51,168 +65,430 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# =========================================================
+# Type checking / Linting
+# =========================================================
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+.pyre/
+.pytype/
+
+.ruff_cache/
+
+# =========================================================
 # Translations
+# =========================================================
+
 *.mo
 *.pot
 
-# Django stuff:
+# =========================================================
+# Django
+# =========================================================
+
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff:
+# =========================================================
+# Flask
+# =========================================================
+
 instance/
 .webassets-cache
 
-# Scrapy stuff:
-.scrapy
+# =========================================================
+# Scrapy
+# =========================================================
 
-# Sphinx documentation
+.scrapy/
+
+# =========================================================
+# Documentation
+# =========================================================
+
 docs/_build/
+site/
 
+# =========================================================
 # PyBuilder
+# =========================================================
+
 .pybuilder/
 target/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# =========================================================
+# Jupyter
+# =========================================================
 
+.ipynb_checkpoints/
+
+# =========================================================
 # IPython
+# =========================================================
+
 profile_default/
 ipython_config.py
 
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
+# =========================================================
+# Python Version Managers
+# =========================================================
+
+# Uncomment if you do not want to commit Python version
 # .python-version
 
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
+# =========================================================
+# Pipenv
+# =========================================================
+
+# Recommended to commit Pipfile.lock for reproducibility.
 # Pipfile.lock
 
-# UV
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-# uv.lock
+# =========================================================
+# uv
+# =========================================================
 
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+# For LIFZ Corpus, commit uv.lock for reproducible environments.
+# DO NOT ignore uv.lock.
+
+# =========================================================
+# Poetry
+# =========================================================
+
+# Recommended to commit poetry.lock.
 # poetry.lock
 # poetry.toml
 
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
-#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
+# =========================================================
+# PDM
+# =========================================================
+
+# Recommended to commit pdm.lock.
 # pdm.lock
 # pdm.toml
+
 .pdm-python
 .pdm-build/
 
-# pixi
-#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
-# pixi.lock
-#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
-.pixi
+# =========================================================
+# Pixi
+# =========================================================
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# Recommended to commit pixi.lock.
+# pixi.lock
+
+.pixi/
+
+# =========================================================
+# PEP 582
+# =========================================================
+
 __pypackages__/
 
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
+# =========================================================
+# Virtual Environments
+# =========================================================
 
-# Redis
-*.rdb
-*.aof
-*.pid
-
-# RabbitMQ
-mnesia/
-rabbitmq/
-rabbitmq-data/
-
-# ActiveMQ
-activemq-data/
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
 .env
+.env.*
+!.env.example
+
 .envrc
-.venv
-env/
+
+.venv/
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# =========================================================
+# Celery
+# =========================================================
+
+celerybeat-schedule
+celerybeat.pid
+
+# =========================================================
+# Redis
+# =========================================================
+
+*.rdb
+*.aof
+*.pid
+
+# =========================================================
+# RabbitMQ
+# =========================================================
+
+mnesia/
+rabbitmq/
+rabbitmq-data/
+
+# =========================================================
+# ActiveMQ
+# =========================================================
+
+activemq-data/
+
+# =========================================================
+# SageMath
+# =========================================================
+
+*.sage.py
+
+# =========================================================
+# IDE / Editors
+# =========================================================
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains / PyCharm
+.idea/
+
+# Spyder
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope
 .ropeproject
 
-# mkdocs documentation
-/site
+# Vim
+*.swp
+*.swo
+*~
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#   and can be added to the global gitignore or merged into this file.  For a more nuclear
-#   option (not recommended) you can uncomment the following to ignore the entire idea folder.
-# .idea/
-
-# Abstra
-#   Abstra is an AI-powered process automation framework.
-#   Ignore directories containing user credentials, local state, and settings.
-#   Learn more at https://abstra.io/docs
-.abstra/
-
-# Visual Studio Code
-#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#   that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#   and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#   you could uncomment the following to ignore the entire vscode folder
-# .vscode/
-# Temporary file for partial code execution
+# Temporary VS Code runner
 tempCodeRunnerFile.py
 
-# Ruff stuff:
-.ruff_cache/
+# =========================================================
+# OS Generated Files
+# =========================================================
 
-# PyPI configuration file
+.DS_Store
+.DS_Store?
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# =========================================================
+# Abstra
+# =========================================================
+
+.abstra/
+
+# =========================================================
+# Cython
+# =========================================================
+
+cython_debug/
+
+# =========================================================
+# PyPI
+# =========================================================
+
 .pypirc
 
+# =========================================================
 # Marimo
+# =========================================================
+
 marimo/_static/
 marimo/_lsp/
 __marimo__/
 
+# =========================================================
 # Streamlit
+# =========================================================
+
 .streamlit/secrets.toml
+
+# =========================================================
+# LIFZ Corpus - Dataset Storage
+# =========================================================
+
+# Main data directories
+data/raw/
+data/clean/
+data/processed/
+data/tokenized/
+data/shards/
+data/cache/
+
+# Dataset collections
+datasets/*/raw/
+datasets/*/clean/
+datasets/*/processed/
+datasets/*/tokenized/
+datasets/*/shards/
+datasets/*/cache/
+
+# =========================================================
+# LIFZ Corpus - Crawled Web Data
+# =========================================================
+
+# Web archive formats
+*.warc
+*.warc.gz
+*.wet
+*.wet.gz
+*.wat
+*.wat.gz
+
+# Crawled HTML
+*.html.gz
+
+# Crawl databases / state
+crawl.db
+crawler.db
+visited.db
+
+# =========================================================
+# LIFZ Corpus - Dataset Formats
+# =========================================================
+
+# JSON Lines datasets
+*.jsonl
+*.jsonl.gz
+*.jsonl.zst
+
+# Apache Parquet
+*.parquet
+
+# Apache Arrow
+*.arrow
+
+# Binary training data
+*.bin
+*.idx
+
+# NumPy datasets
+*.npy
+*.npz
+
+# Pickled datasets
+*.pkl
+*.pickle
+
+# Compression
+*.zst
+
+# =========================================================
+# LIFZ Corpus - Generated Outputs
+# =========================================================
+
+outputs/
+results/
+
+reports/generated/
+
+exports/
+
+# =========================================================
+# LIFZ Corpus - Logs
+# =========================================================
+
+logs/
+*.log
+
+# =========================================================
+# LIFZ Corpus - Temporary Files
+# =========================================================
+
+tmp/
+temp/
+temporary/
+
+downloads_cache/
+crawler_cache/
+extract_cache/
+clean_cache/
+
+# =========================================================
+# LIFZ Corpus - Checkpoints / Models
+# =========================================================
+
+checkpoints/
+models/
+
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# =========================================================
+# LIFZ Corpus - Tokenizer Generated Files
+# =========================================================
+
+tokenizer/generated/
+
+# Uncomment these if tokenizer files are generated locally
+# tokenizer.json
+# tokenizer.model
+# vocab.json
+# merges.txt
+
+# =========================================================
+# LIFZ Corpus - Local Configuration
+# =========================================================
+
+config.local.yaml
+config.local.yml
+config.local.json
+
+*.local.yaml
+*.local.yml
+*.local.json
+
+# =========================================================
+# LIFZ Corpus - Secrets / Credentials
+# =========================================================
+
+credentials.json
+secrets.json
+secrets.yaml
+secrets.yml
+
+*.pem
+*.key
+
+# =========================================================
+# LIFZ Corpus - Keep Small Example Data
+# =========================================================
+
+# Allow small example datasets to be committed
+!examples/**/*.jsonl
+!examples/**/*.json
+!examples/**/*.txt
+
+# Allow test fixtures
+!tests/fixtures/**/*.jsonl
+!tests/fixtures/**/*.json
+!tests/fixtures/**/*.txt
+
+# Allow sample dataset
+!data/sample/
+!data/sample/**
+
+# =========================================================
+# LIFZ Corpus - Misc
+# =========================================================
+
+# Profiling
+*.prof
+*.lprof
+
+# Python debugging
+.pydevd/
+
+# Local benchmark outputs
+benchmarks/results/
+
+# Scratch files
+scratch/
